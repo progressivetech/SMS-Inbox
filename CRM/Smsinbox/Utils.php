@@ -17,7 +17,7 @@ class CRM_Smsinbox_Utils {
     $unreadMessageCount = CRM_Smsinbox_SmsInbound::count_unread(); 
 
     if (0 == $unreadMessageCount) {
-      return;
+      return NULL;
     }
     elseif (1 == $unreadMessageCount) {
       $message = 'You have one unread SMS message. Click <a href="/civicrm/smsinbox">here</a> to read it.';
@@ -26,9 +26,7 @@ class CRM_Smsinbox_Utils {
       $message = 'You have %1 unread SMS messages. Click <a href="/civicrm/smsinbox">here</a> to read them.';
     }
 
-    CRM_Core_Session::setStatus(E::ts($message, array(
-      1 => $unreadMessageCount,
-    )), '', 'info');
+    return E::ts($message, [1 => $unreadMessageCount]);
   }
 
   public static function getDisplayNameWithFallback($contactId) {
