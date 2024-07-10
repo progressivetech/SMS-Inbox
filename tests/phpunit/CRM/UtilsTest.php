@@ -20,7 +20,7 @@ use Civi\Test\EndToEndInterface;
  * @group e2e
  * @see cv
  */
-class CRM_Smsinbox_SmsSenderTest extends \PHPUnit_Framework_TestCase implements EndToEndInterface {
+class CRM_Smsinbox_SmsSenderTest extends \CivixPhar\PHPUnit\Framework\TestCase implements EndToEndInterface {
 
   public static function setUpBeforeClass() {
     // See: https://github.com/civicrm/org.civicrm.testapalooza/blob/master/civi-test.md
