@@ -29,5 +29,5 @@
 <a class="button crm-popup" href="{crmURL p="civicrm/smsinbox/sendsms"}"><i class="crm-i fa-envelope"></i> Send SMS message</a>
 
 
-{crmScript ext=com.civifirst.smsinbox file=js/smsinbox.js}
-{crmStyle ext=com.civifirst.smsinbox file=css/smsinbox.css}
+{crmScript ext="com.civifirst.smsinbox" file="js/smsinbox.js"}
+{crmStyle ext="com.civifirst.smsinbox" file="css/smsinbox.css"}
