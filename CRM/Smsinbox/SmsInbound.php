@@ -50,7 +50,7 @@ class CRM_Smsinbox_SmsInbound {
       $where_clause = NULL;
     }
 
-    $query = "${select_clause} ${from_clause} ${where_clause} ${order_clause} ${limit_clause}";
+    $query = "{$select_clause} {$from_clause} {$where_clause} {$order_clause} {$limit_clause}";
     $params = [ 0 => [ $source_record_type_id, 'Integer' ], 1 => [ $limit, 'Integer' ], 2 => [ $offset, 'Integer' ] ];
     $dao = CRM_Core_DAO::executeQuery($query, $params);
     while ($dao->fetch()) {
